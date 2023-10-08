@@ -7,4 +7,6 @@ result = json.loads(response.text)
 for element in result["ListItems_rls"]:
     program = Program(element)
     program.get_program_info()
-    program.write_program_in_file()
+    # program.write_program_in_file()
+    print(program)
+    program.write_program_in_excel('output.xlsx')
